@@ -206,7 +206,7 @@ export default function GenerateCode() {
     <div className="flex flex-col justify-center items-center gap-8 text-zinc-100 bg-zinc-800 rounded-xl w-11/12 p-8 max-w-2xl sm:w-11/12 sm:p-12 lg:w-2/3 lg:p-12 lg:max-w-2xl">
       <h1>Gerador de Código SENASP</h1>
       <select
-        className="bg-zinc-600 p-3 rounded w-full text-zinc-300"
+        className="bg-zinc-600 p-5 lg:p-3 rounded w-full text-zinc-300"
         value={selection.type}
         onChange={handleSelectionChange("type")}
       >
@@ -219,7 +219,7 @@ export default function GenerateCode() {
       </select>
       <select
         id="group"
-        className="bg-zinc-600 p-3 rounded w-full text-zinc-300"
+        className="bg-zinc-600 p-5 lg:p-3 rounded w-full text-zinc-300"
         value={selection.group}
         onChange={handleSelectionChange("group")}
         disabled={!selection.type}
@@ -232,7 +232,7 @@ export default function GenerateCode() {
         ))}
       </select>
       <select
-        className="bg-zinc-600 p-3 rounded w-full text-zinc-300"
+        className="bg-zinc-600 p-5 lg:p-3 rounded w-full text-zinc-300"
         value={selection.class}
         onChange={handleSelectionChange("class")}
         disabled={!selection.group}
@@ -245,7 +245,7 @@ export default function GenerateCode() {
         ))}
       </select>
       <select
-        className="bg-zinc-600 p-3 rounded w-full text-zinc-300"
+        className="bg-zinc-600 p-5 lg:p-3 rounded w-full text-zinc-300"
         disabled={!selection.class}
         value={selection.item}
         onChange={handleSelectionChange("item")}
