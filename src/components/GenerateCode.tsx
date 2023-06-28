@@ -262,12 +262,12 @@ export default function GenerateCode() {
 
       <div className="flex gap-5 w-full">
         <button
-          className="w-1/5 bg-zinc-200 p-4 rounded text-zinc-700 text-center flex justify-between"
+          className="w-2/5 lg:w-1/5 bg-zinc-200 p-4 rounded text-zinc-700 text-center flex justify-between"
           onClick={handleClear}
-        >Limpar <Trash  size={22} />
+        >Limpar <Trash  size={20} />
         </button>
         <button
-          className="w-4/5 bg-green-400 p-2 rounded text-zinc-700"
+          className="w-3/5 lg:w-4/5 bg-green-400 p-2 rounded text-zinc-700"
           style={{ opacity: isGenerateButtonDisabled ? 0.5 : 1 }}
           onClick={handleGenerateCode}
           disabled={isGenerateButtonDisabled}
