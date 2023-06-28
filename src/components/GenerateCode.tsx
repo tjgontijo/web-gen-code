@@ -23,28 +23,30 @@ type Item = {
   cod_senasp: string;
 };
 
+const API = 'https://api-gen-code.onrender.com'
+
 async function fetchTypes(): Promise<Type[]> {
-  const response = await fetch("http://localhost:3333/types");
+  const response = await fetch(`${API}/types`);
   return response.json();
 }
 
 async function fetchGroupsByType(typeId: number): Promise<Group[]> {
-  const response = await fetch(`http://localhost:3333/group-type/${typeId}`);
+  const response = await fetch(`${API}/group-type/${typeId}`);
   return response.json();
 }
 
 async function fetchClassesByGroup(groupId: number): Promise<Class[]> {
-  const response = await fetch(`http://localhost:3333/class-group/${groupId}`);
+  const response = await fetch(`${API}/class-group/${groupId}`);
   return response.json();
 }
 
 async function fetchItemsByClass(classId: number): Promise<Item[]> {
-  const response = await fetch(`http://localhost:3333/item-class/${classId}`);
+  const response = await fetch(`${API}/item-class/${classId}`);
   return response.json();
 }
 
 async function fetchItemCodById(itemId: number): Promise<string> {
-  const response = await fetch(`http://localhost:3333/items/${itemId}`);
+  const response = await fetch(`${API}/items/${itemId}`);
   const jsonData = await response.json();
   return jsonData[0].cod_senasp;
 }
