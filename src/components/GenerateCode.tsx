@@ -203,8 +203,8 @@ export default function GenerateCode() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-8 text-zinc-100 bg-zinc-800 rounded-xl w-11/12 p-8 max-w-2xl sm:w-11/12 sm:p-12 lg:w-2/3 lg:p-12 lg:max-w-2xl">
-      <h1>Gerador de Código SENASP</h1>
+    <div className="flex flex-col justify-center text-center items-center gap-8 text-zinc-100 bg-zinc-800 rounded-xl w-11/12 p-8 max-w-2xl sm:w-11/12 sm:p-12 lg:w-2/3 lg:p-12 lg:max-w-2xl">
+      <h1 className="text-2xl">Gerador de Código <br></br><strong>SENASP</strong></h1>
       <select
         className="bg-zinc-600 p-4 lg:p-3 rounded w-full text-zinc-300"
         value={selection.type}
