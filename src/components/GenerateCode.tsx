@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
-import { Trash  } from "@phosphor-icons/react";
+import { Trash } from "@phosphor-icons/react";
+import 'dotenv/config'
 
 type Type = {
   id: number;
@@ -23,7 +24,7 @@ type Item = {
   cod_senasp: string;
 };
 
-const API = 'https://api-gen-code.onrender.com'
+const API = process.env.API_URL;
 
 async function fetchTypes(): Promise<Type[]> {
   const response = await fetch(`${API}/types`);
